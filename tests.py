@@ -4,7 +4,7 @@ import wsgiref.util
 import wsgiref.validate
 import sys
 
-__author__ = 'pahaz'
+__author__ = 'Tanika'
 PY3 = sys.version_info[0] == 3
 
 # MOCK environ
