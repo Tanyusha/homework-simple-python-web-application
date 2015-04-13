@@ -1,0 +1,94 @@
+body            { font-family: sans-serif; background: #eee; }
+/*a, h1, h2       { color: #377ba8; }*/
+/*h1, h2          { font-family: 'Georgia', serif; margin: 0; }*/
+/*h1              { border-bottom: 2px solid #eee; }*/
+/*h2              { font-size: 1.2em; }*/
+
+.page           { margin: 0 auto; width: 50%;
+                 background: white; }
+.complains        { list-style: none; margin: 0; padding: 0; }
+.add-complain      { font-size: 0.9em; border-bottom: 1px solid #ccc; }
+.add-complain dl   { font-weight: bold; }
+.metanav        { text-align: right; font-size: 0.8em; padding: 0.3em;
+                  background: #fafafa; }
+.flash          { background: #cee5F5; padding: 0.5em;
+                  margin-bottom: 10px; }
+.error          { background: #f0d6d6; padding: 0.5em; }
+
+.btn {
+    margin-top: 20px;
+}
+
+label {
+    margin:20px 0 10px 0;
+}
+
+a {
+    font-size: 12px;
+    color: #5bc0de;
+}
+
+a:hover {
+    text-decoration: none;
+    color:#2aabd2;
+}
+
+li{
+    border-bottom: 1px solid #ddc;
+
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+.complains-title, .login-title, .check-in-title {
+    background-color: #5bc0de;
+    color: #ffffff;
+    padding: 10px 10px;
+}
+
+.complains-title h2, .login-title h2, .check-in-title h2 {
+    margin: 0;
+}
+
+.jumbotron {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.metanav h1 {
+    text-align: left;
+    margin-left:10px;
+}
+
+.metanav p{
+    margin-right:10px;
+    font-size: 15px;
+}
+.new-complains, .login-form, .check-in-form {
+    margin:10px 15px;
+}
+
+.complain-title {
+    background-color: #fafafa;
+}
+
+.complain-title h2{
+    /*margin: 0;*/
+    padding: 10px 0 0 10px;
+    word-break: break-all;
+}
+
+.complain-title p {
+    padding: 0 0 10px 10px;
+    font-size: 12px;
+}
+
+.complains p {
+    padding-left: 10px;
+}
+
+.no-complains {
+    padding: 20px 0 0 10px;
+}
