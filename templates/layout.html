@@ -1,0 +1,26 @@
+<!doctype html>
+<title>Книга жалоб</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<div class='metanav'>
+    {% if not session.user %}
+    <a href="{{ url_for('login') }}">Войти</a>
+      или <a href="{{ url_for('check_in') }}">Зарегестрироваться</a>
+    {% else %}
+      <p>{{session.user}} <a href="{{ url_for('logout') }}">Выйти</a></p>
+  {% endif %}
+  <a href="{{ url_for('show_complains') }}"><h1>Книга жалоб</h1></a>
+  </div>
+<div class="page jumbotron">
+  {% for message in get_flashed_messages() %}
+    <div class=flash>{{ message }}</div>
+  {% endfor %}
+  {% block body %}{% endblock %}
+</div>

@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if session.user %}
+    <div class="complains-title">
+    <h2>Новая жалоба</h2>
+  </div>
+      <div class="new-complains">
+    <form class="form-group" action="{{ url_for('add_complain') }}" method=post class=add-complain>
+        <label for="title">Адрес</label>
+        <input class="form-control" type=text size=30 name=title placeholder="URL">
+        <label for="text">Описание жалобы</label>
+        <textarea class="form-control" name=text rows=5 cols=40 placeholder="Текст жалобы"></textarea>
+        <input class="btn btn-info" type=submit value='Опубликовать жалобу'>
+    </form>
+      </div>
+  {% endif %}
+      <div class="complains-title">
+    <h2>Последние жалобы</h2>
+  </div>
+    <div class="complains">
+  <ul class='complains'>
+  {% for complain in complains %}
+    <li><div class="complain-title"><h2>{{ complain.title }}</h2> <p>{{ complain.user }}</p></div> <p>{{ complain.text|safe }}</p></li>
+
+  {% else %}
+    <li><div class="no-complains"><em>Жалоб нет</em></div></li>
+  {% endfor %}
+  </ul>
+{% endblock %}
+</div>
